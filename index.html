@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Gradient Generator</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+      </head>
+      <body>
+        <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1-8.313-12.454z"></path>
+          </svg>
+        </button>
+        <div class="container">
+          <h1>Gradient Generator</h1>
+          <div class="controls">
+            <div class="color-pickers">
+              <input type="color" id="color1" value="#ff0000" aria-label="First color" />
+              <input type="color" id="color2" value="#0000ff" aria-label="Second color" />
+            </div>
+            <select id="direction" aria-label="Gradient direction">
+              <option value="to right">Left to Right</option>
+              <option value="to left">Right to Left</option>
+              <option value="to bottom">Top to Bottom</option>
+              <option value="to top">Bottom to Top</option>
+              <option value="to bottom right">Diagonal</option>
+            </select>
+            <button id="generate">Generate Gradient</button>
+            <button id="random">Generate Random</button>
+            <button id="download">Download HD Image</button>
+          </div>
+          <div class="gradient-preview" id="gradientPreview" aria-label="Gradient preview"></div>
+        </div>
+        <script type="module" src="main.js"></script>
+      </body>
+    </html>
